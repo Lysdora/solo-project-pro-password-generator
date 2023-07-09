@@ -1,4 +1,4 @@
-const characters = [
+let characters = [
   "A",
   "B",
   "C",
@@ -91,3 +91,22 @@ const characters = [
   "?",
   "/",
 ];
+
+let passwordElOne = document.getElementById("randomPassOne");
+let passwordElTwo = document.getElementById("randomPassTwo");
+
+function random() {
+  let password = "";
+  for (let i = 0; i < 10; i++) {
+    //Generate random number 1
+    let numberOne = Math.floor(Math.random() * characters.length);
+    password += characters[numberOne];
+    //Generate random number 2
+    let numberTwo = Math.floor(Math.random() * characters.length);
+    password += characters[numberTwo];
+  }
+  passwordElOne.textContent = password;
+  passwordElTwo.textContent = password;
+}
+
+//passwordEl.addEventListener(random);
