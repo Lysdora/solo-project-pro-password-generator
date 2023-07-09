@@ -94,6 +94,7 @@ let characters = [
 
 let passwordElOne = document.getElementById("randomPassOne");
 let passwordElTwo = document.getElementById("randomPassTwo");
+let span = document.querySelector("span");
 
 function random() {
   let password = "";
@@ -108,5 +109,3 @@ function random() {
   passwordElOne.textContent = password;
   passwordElTwo.textContent = password;
 }
-
-//passwordEl.addEventListener(random);
